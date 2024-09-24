@@ -3,7 +3,7 @@ This repository hosts analysis code for the paper "Hospital environments harbor 
 
 Please cite //TBD
 
-Please feel free to contact [Erica Hartmann](erica.hartmann@northwestern.edu) or [Jiaxian Shen](jiaxianshen2022@u.northwestern.edu) if you have any questions.
+Please feel free to contact [Erica Hartmann](erica.hartmann@northwestern.edu) or [Jiaxian Shen](jiaxianshen2022@u.northwestern.edu) if you have any questions or need intermediate data files (e.g., RData).
 
 The directory structure is as follows:
 * `bioinformatics_bash_src/`: Bash scripts used to process whole genome sequences of bacteria isolates.
