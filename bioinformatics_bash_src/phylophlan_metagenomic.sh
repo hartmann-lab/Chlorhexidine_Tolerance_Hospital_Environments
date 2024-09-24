@@ -1,15 +1,15 @@
 #!/bin/bash
 #SBATCH --job-name="phylophlan_test_3_samples" 
-#SBATCH -A p30892             
+#SBATCH -A <partition>             
 #SBATCH -p short               # Queue/partition
 #SBATCH -t 02:00:00             # Walltime/duration of the job
 #SBATCH -N 1                    # Number of Nodes
 #SBATCH --mem=0    # --mem=0 means you take the whole node  
 #SBATCH --ntasks-per-node=28     
-#SBATCH --mail-user=jiaxianshen2022@u.northwestern.edu
+#SBATCH --mail-user=<email>
 #SBATCH --mail-type=BEGIN,END,FAIL
-#SBATCH --output=/projects/p30892/chx_wgs/log/"%x_%j.log"  
-#SBATCH --error=/projects/p30892/chx_wgs/log/"%x_%j.err"
+#SBATCH --output=/projects/<partition>/chx_wgs/log/"%x_%j.log"  
+#SBATCH --error=/projects/<partition>/chx_wgs/log/"%x_%j.err"
 
 #######################
 
@@ -23,11 +23,11 @@ source activate phylophlan
 
 
 # Set directory variables
-parent_dir=/projects/p30892/chx_wgs
+parent_dir=/projects/<partition>/chx_wgs
 # input_dir=spades_out_scaffolds
 input_dir=spades_out_scaffolds
 output_dir=phylophlan_metagenomic_out
-database_dir=/projects/p30892/software/phylophlan/phylophlan_databases
+database_dir=/projects/<partition>/software/phylophlan/phylophlan_databases
 
 # All use absolute path specfied by the above section
 while read sample

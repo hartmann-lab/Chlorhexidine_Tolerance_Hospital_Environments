@@ -1,15 +1,15 @@
 #!/bin/bash
 #SBATCH --job-name="checkm_continue" 
-#SBATCH -A p30892             
+#SBATCH -A <partition>          
 #SBATCH -p short                # Queue/partition
 #SBATCH -t 04:00:00             # Walltime/duration of the job
 #SBATCH -N 1                    # Number of Nodes
 #SBATCH --mem=0    # --mem=0 means you take the whole node  
 #SBATCH --ntasks-per-node=28     
-#SBATCH --mail-user=jiaxianshen2022@u.northwestern.edu
+#SBATCH --mail-user=<email>
 #SBATCH --mail-type=BEGIN,END,FAIL
-#SBATCH --output=/projects/p30892/chx_wgs/log/"%x_%j.log"  
-#SBATCH --error=/projects/p30892/chx_wgs/log/"%x_%j.err"
+#SBATCH --output=/projects/<partition>/chx_wgs/log/"%x_%j.log"  
+#SBATCH --error=/projects/<partition>/chx_wgs/log/"%x_%j.err"
 
 #######################
 # I haven't figured out how to get the plot functions to work. It seems that the Utility Commands have to be run prior to plotting. Some utility commands require prerequisite files. For example, the coverage function requires indexed and sorted BAM files produced with a tool such as BWA. 
@@ -26,7 +26,7 @@ source activate checkm
 checkm data setRoot /projects/b1180/software/checkm_reference_data/checkm_data_2015_01_16
 
 # Go to working directory
-cd /projects/p30892/chx_wgs
+cd /projects/<partition>/chx_wgs
 
 # Specify input and output directory
 input_dir=spades_out_scaffolds

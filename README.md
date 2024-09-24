@@ -6,7 +6,8 @@ Please cite //TBD
 Please feel free to contact [Erica Hartmann](erica.hartmann@northwestern.edu) or [Jiaxian Shen](jiaxianshen2022@u.northwestern.edu) if you have any questions.
 
 The directory structure is as follows:
-//TBD
+* `bioinformatics_bash_src/`: Bash scripts used to process whole genome sequences of bacteria isolates.
+* `fig_src/`: Source code used to generate figures. See Figure Guide.
 
 # Figure Guide
 The source code for figures can be found in the following scripts in `fig_src/`. 

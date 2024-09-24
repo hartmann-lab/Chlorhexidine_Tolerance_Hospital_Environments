@@ -1,15 +1,15 @@
 #!/bin/bash
 #SBATCH --job-name="rgi_on_mefinder_seq" 
-#SBATCH -A p30892             
+#SBATCH -A <partition>             
 #SBATCH -p short               # Queue/partition
 #SBATCH -t 04:00:00             # Walltime/duration of the job
 #SBATCH -N 1                    # Number of Nodes
 #SBATCH --mem=0    # --mem=0 means you take the whole node  
 #SBATCH --ntasks-per-node=28     
-#SBATCH --mail-user=jiaxianshen2022@u.northwestern.edu
+#SBATCH --mail-user=<email>
 #SBATCH --mail-type=BEGIN,END,FAIL
-#SBATCH --output=/projects/p30892/chx_wgs/log/"%x_%j.log"  
-#SBATCH --error=/projects/p30892/chx_wgs/log/"%x_%j.err"
+#SBATCH --output=/projects/<partition>/chx_wgs/log/"%x_%j.log"  
+#SBATCH --error=/projects/<partition>/chx_wgs/log/"%x_%j.err"
 
 #######################
 # Input: sequences identified by MobileElementFinder
@@ -23,10 +23,10 @@ source activate rgi
 
 
 # Set directory variables
-parent_dir=/projects/p30892/chx_wgs
+parent_dir=/projects/<partition>/chx_wgs
 input_dir=mobile_element_finder_out
 output_dir=rgi_on_mefinder_seq_out
-database_dir=/projects/p30892/software/rgi
+database_dir=/projects/<partition>/software/rgi
 
 # load database
 rgi clean --local

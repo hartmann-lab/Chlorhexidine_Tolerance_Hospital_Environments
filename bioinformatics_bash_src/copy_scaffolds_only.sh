@@ -3,7 +3,7 @@
 # copy scaffolds from from_dir to to_dir
 
 # Go to working directory
-cd /projects/p30892/chx_wgs
+cd /projects/<partition>/chx_wgs
 
 # from_dir=spades_out
 # to_dir=spades_out_scaffolds

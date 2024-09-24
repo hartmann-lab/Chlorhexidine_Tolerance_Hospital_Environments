@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name="rgi_on_genomad_plasmid_seq" 
-#SBATCH -A p30892             
+#SBATCH -A <partition>             
 #SBATCH -p short               # Queue/partition
 #SBATCH -t 04:00:00             # Walltime/duration of the job
 #SBATCH -N 1                    # Number of Nodes
@@ -8,8 +8,8 @@
 #SBATCH --ntasks-per-node=28     
 #SBATCH --mail-user=jiaxian.shen@northwestern.edu
 #SBATCH --mail-type=BEGIN,END,FAIL
-#SBATCH --output=/projects/p30892/chx_wgs/log/"%x_%j.log"  
-#SBATCH --error=/projects/p30892/chx_wgs/log/"%x_%j.err"
+#SBATCH --output=/projects/<partition>/chx_wgs/log/"%x_%j.log"  
+#SBATCH --error=/projects/<partition>/chx_wgs/log/"%x_%j.err"
 
 #######################
 # Input: plasmid sequences identified by geNomad
@@ -23,11 +23,11 @@ source activate rgi
 
 
 # Set directory variables
-parent_dir=/projects/p30892/chx_wgs
+parent_dir=/projects/<partition>/chx_wgs
 input_dir=genomad_out
 output_dir=rgi_on_genomad_plasmid_seq_out
 
-database_dir=/projects/p30892/software/rgi
+database_dir=/projects/<partition>/software/rgi
 
 # load database
 rgi clean --local
