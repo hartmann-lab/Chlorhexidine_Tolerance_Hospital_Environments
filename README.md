@@ -1,7 +1,7 @@
 # Chlorhexidine_Tolerance_Hospital_Environments
 This repository hosts analysis code for the paper "Hospital environments harbor chlorhexidine tolerant bacteria potentially linked to chlorhexidine persistence in the environment."
 
-**Please cite**
+**Please cite**  
 Shen, Jiaxian, Yuhan Weng, Tyler Shimada, Meghana Karan, Andrew Watson, Rachel L. Medernach, Vincent B. Young, Mary K. Hayden, and Erica M. Hartmann. "Hospital environments harbor chlorhexidine tolerant bacteria potentially linked to chlorhexidine persistence in the environment." medRxiv (2024): 2024-10.
 
 Please feel free to contact [Erica Hartmann](erica.hartmann@northwestern.edu) or [Jiaxian Shen](jiaxianshen2022@u.northwestern.edu) if you have any questions or need intermediate data files (e.g., RData).
